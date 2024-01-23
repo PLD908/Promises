@@ -4,35 +4,35 @@
 // fulfilled or resolved state
 // Reject state
 
-// let myPromise = new Promise(function(resolve, reject) {
-//     console.log("myPromise is here");
-// });
+let myPromise = new Promise(function(resolve, reject) {
+    console.log("myPromise is here");
+});
 
-// const matchWon = true;
-// let checkScore = new Promise(function(resolve, reject) {
-//     if (matchWon) {
-//         resolve("Your team won")
-//     } else {
-//         reject("Your team lost the match")
-//     };
-// });
-// console.log(checkScore);
+const matchWon = true;
+let checkScore = new Promise(function(resolve, reject) {
+    if (matchWon) {
+        resolve("Your team won")
+    } else {
+        reject("Your team lost the match")
+    };
+});
+console.log(checkScore);
 
-// let scoreCheck = new Promise((resolve, reject) => {
-//     resolve("We Won");
-//     // reject("We lost");
-// });
+let scoreCheck = new Promise((resolve, reject) => {
+    resolve("We Won");
+    // reject("We lost");
+});
 
-// scoreCheck
-// .then(function wonMatch(matchResult) {
-//     console.log(matchResult);
-// })
-// .catch(function wonMatchB(lost) {
-//     console.log(lost)
-// })
-// .finally(function done() {
-//     console.log("We are done with promise in practical")
-// });
+scoreCheck
+.then(function wonMatch(matchResult) {
+    console.log(matchResult);
+})
+.catch(function wonMatchB(lost) {
+    console.log(lost)
+})
+.finally(function done() {
+    console.log("We are done with promise in practical")
+});
 
 fetch("https://www.thecocktaildb.com/api/json/v1/1/random.php")
     .then((response) => {
